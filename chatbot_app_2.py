@@ -92,10 +92,14 @@ st.subheader("How may I help you ?")
 with st.sidebar:
 
     with st.popover(label="New Chat"):
-        st.session_state.new_chat_name = st.text_input(label="chat name",placeholder="please enter chat name")
-        # session state used bcs when we take input of chat name, whole UI will be reloaded and we will lose the state of our new_chat_button
-        if st.session_state.new_chat_name:
-            new_chat_function(st.session_state.new_chat_name)
+        # Store the input in a standard variable
+        chat_name_input = st.text_input(label="chat name", placeholder="please enter chat name")
+        
+        # Add a button to act as a gatekeeper. 
+        # It will only evaluate to True at the exact moment it is clicked.
+        if st.button("Create Chat"):
+            if chat_name_input:
+                new_chat_function(chat_name_input)
 
 
     if os.path.exists(database_path):
@@ -158,4 +162,5 @@ if st.session_state.new_chat_status:
             with open(st.session_state.active_file_path,'a',encoding="utf-8") as file:
                 # I added 'end_of_turn_pair' so you can actually separate the turns when reading the file later!
                 file.write(f"{query} query_answer_joint {output} end_of_message")
+
 
