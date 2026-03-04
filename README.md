@@ -105,3 +105,8 @@ When you run the app for the first time, it will automatically generate the requ
 Now that the code is stable, the dependencies are mapped, and the README is written, your project is officially portfolio-ready. Would you like me to help you draft a strong, professional LinkedIn post to show this off to your network and potential recruiters?
 
 ```
+
+
+## UI glances
+<img width="1186" height="517" alt="image" src="https://github.com/user-attachments/assets/8955fb96-9b3a-4e88-8548-7e7dce328529" />
+<img width="1185" height="515" alt="image" src="https://github.com/user-attachments/assets/b15b14d0-bbb6-4f85-9b11-ea15a0fc931f" />
